@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style type="text/css">
-#text-box {    
-        border-radius: 15px;    
-        -moz-border-radius: 15px;    
-        background: #efefef;    
-        border: 1px solid #ccc;    
-        padding: 75px 20px 0 20px;    
-        height: 175px;    
-        width: 400px;
-    }
-
-#text-content {	
-        color: #333;	
-        text-shadow: 0 1px 0 #fff;
-        text-align:center;
-    }
+    <link rel="shortcut icon" href="/favicon.ico">
+      
+    <!--This is the Page SEO-->
+    <meta name="robots" content="noodp,noydir" />
+    <meta name="description" content="Iterations Creativity Cards are a new way to help you with your creativity. Sketch out an idea, draw a card, refine that idea based on the card’s instructions. Repeat." />
+    <meta name="keywords" content="creativity cards, creative process, creative methodologies, design tools, duncan mckean, creativity, method cards" />
+    <link rel="canonical" href="http://dncnmckn.github.io/iterations" />
+    <link rel="author" href="https://plus.google.com/u/0/103218291675099002403/posts" />
+    <meta property="og:locale" content="en_NL" />
+    <meta property="og:title" content="Iterations: Creativity Cards for Designers" />
+    <meta property="og:description" content="Iterations Creativity Cards are a new way to help you with your creativity. Sketch out an idea, draw a card, refine that idea based on the card’s instructions. Repeat." />
+    <meta property="og:url" content="http://dncnmckn.github.io/iterations" />
+    <meta property="og:site_name" content="Duncan McKean" />
+    <meta property="og:image" content="http://duncanmckean.com/wp-content/uploads/2013/12/Iteration-1.png" />
+    <meta name="twitter:site" content="@dncnmckn"/>
+    <meta name="twitter:domain" content="Duncan McKean"/>
+    <meta name="twitter:creator" content="@dncnmckn"/>
+    <!--This is the end of the page SEO -->
     
-#randomizer {	
-        border-top: 0px solid #999;	
-        display: block;	
-        margin-top: 10px;	
-        text-align: right;	
-        padding-top: 10px;	
-        outline: none;
-    }
-</style>
+        <title>Iterations: Creativity Cards for Designers</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font-awesome 4.0.3 CSS -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" language="javascript">	
 $(document).ready( function() {
     var textArray = [
-'<span style="font-size: large;"><strong>ENTROPY</strong></span><br /><br /><h6>Introduce corruption to Iteration</h6>',
-'<span style="font-size: large;"><strong>CHORUS</strong></span><br /><br /><h6>Repeat motifs across components</h6>',
-'<span style="font-size: large;"><strong>ECHO</strong></span><br /><br /><h6>Repeat, but less</h6>',
-'<span style="font-size: large;"><strong>ENHANCE</strong></span><br /><br /><h6>Furnish with elements of beauty</h6>',
-'<span style="font-size: large;"><strong>POSSESS</strong></span><br /><br /><h6>Imbibe iteration with the spirit of a personal hero</h6>',
-'<span style="font-size: large;"><strong>EXPLODE</strong></span><br /><br /><h6>Fragment Iteration into disorganised components</h6>',
-'<span style="font-size: large;"><strong>REMIX</strong></span><br /><br /><h6>Combine all previous Iterations</h6>',
-            '<span style="font-size: large;">RESPAWN<strong></strong></span><br /><br /><h6>Re-Iterate all components, motifs and functionality in a new way</h6>',
-            '<span style="font-size: large;"><strong>ABORT</strong></span><br /><br /><h6>Prematurely complete process</h6>',
-            '<span style="font-size: large;"><strong>DRUG</strong></span><br /><br /><h6>Visualise the effects of legal and non-legal intoxications</h6>',
-            '<span style="font-size: large;"><strong>DISTORT</strong></span><br /><br /><h6>Next process only affects one part of Iteration</h6>',
-            '<span style="font-size: large;"><strong>COPY</strong></span><br /><br /><h6>Duplicate component or aspect</h6>',
-            '<span style="font-size: large;"><strong>PURIFY</strong></span><br /><br /><h6>Remove all unnecessary affectations from Iteration</h6>',
-            '<span style="font-size: large;"><strong>SHUFFLE</strong></span><br /><br /><h6>Disorder components</h6>',
-            '<span style="font-size: large;"><strong>COMPRESS</strong></span><br /><br /><h6>Remove excessive space</h6>',
-            '<span style="font-size: large;"><strong>EQUALISE</strong></span><br /><br /><h6>Assign same value of importance to all components</h6>',
-            '<span style="font-size: large;"><strong>PASTLIFE</strong></span><br /><br /><h6>Re-Iterate as an ancestor from a different time period</h6>',
-            '<span style="font-size: large;"><strong>LOOP</strong></span><br /><br /><h6>Repeat last Iteration</h6>',
-            '<span style="font-size: large;"><strong>SAMPLE</strong></span><br /><br /><h6>Add new functionality</h6>',
-            '<span style="font-size: large;"><strong>PURGE</strong></span><br /><br /><h6>Remove all functionality</h6>',
-            '<span style="font-size: large;"><strong>BOUNCE</strong></span><br /><br /><h6>Re-Iterate as the absolute opposite</h6>',
-            '<span style="font-size: large;"><strong>CUT</strong></span><br /><br /><h6>Remove component or aspect</h6>',
-            '<span style="font-size: large;"><strong>THOMPSON</strong></span><br /><br /><h6>Encourage craziness in Iteration</h6>',
-            '<span style="font-size: large;"><strong>DELICATE</strong></span><br /><br /><h6>Like a leaf on the wind</h6>',
-            '<span style="font-size: large;"><strong>ORDER</strong></span><br /><br /><h6>Logical, linear, layout</h6>',
-            '<span style="font-size: large;"><strong>FORCE</strong></span><br /><br /><h6>Complicate the Iteration to the point of unusability</h6>',
-            '<span style="font-size: large;"><strong>GHOST</strong></span><br /><br /><h6>Echo a design classic</h6>',
-            '<span style="font-size: large;"><strong>LAX</strong></span><br /><br /><h6>Be lazy about the process</h6>',
-            '<span style="font-size: large;"><strong>LIFELINE</strong></span><br /><br /><h6>Get a colleague to Iterate</h6>',
-            '<span style="font-size: large;"><strong>DISGUISE</strong></span><br /><br /><h6>Make Iteration look like something else</h6>',
-            '<span style="font-size: large;"><strong>LOBOTOMISE</strong></span><br /><br /><h6>Remove all complications from Iteration</h6>',
-            '<span style="font-size: large;"><strong>SPLIT SIGNAL</strong></span><br /><br /><h6>Create two Iterations each containing half the components</h6>',
-            '<span style="font-size: large;"><strong>CLEAN</strong></span><br /><br /><h6>Lighten colours, soften textures, smooth components</h6>',
-            '<span style="font-size: large;"><strong>DIRT</strong></span><br /><br /><h6>Darken colours, harden textures, roughen components</h6>',
-            '<span style="font-size: large;"><strong>LYNCH</strong></span><br /><br /><h6>Encourage surrealism in Iteration</h6>',
-            '<span style="font-size: large;"><strong>FUZZ</strong></span><br /><br /><h6>Soften sharpness. Smooth edges</h6>',
-            '<span style="font-size: large;"><strong>VIRUS</strong></span><br /><br /><h6>Grow new iteration from each component, function, affectation</h6>',
-            '<span style="font-size: large;"><strong>REPLACE</strong></span><br /><br /><h6>Replace component with another</h6>',
-            '<span style="font-size: large;"><strong>OVERDRIVE</strong></span><br /><br /><h6>Create ten Iterations in twenty minutes</h6>',
-            '<span style="font-size: large;"><strong>REVERB</strong></span><br /><br /><h6>Remove main component leaving associated affectations</h6>',
-            '<span style="font-size: large;"><strong>SATURATE</strong></span><br /><br /><h6>Re-iterate using five more cards</h6>',
-            '<span style="font-size: large;"><strong>BLUR</strong></span><br /><br /><h6>Blend component processes and affectations together</h6>',
-            '<span style="font-size: large;"><strong>DODGE</strong></span><br /><br /><h6>Remove extra detail from affectations or functions</h6>',
-            '<span style="font-size: large;"><strong>BURN</strong></span><br /><br /><h6>Apply extra detail to affectations or functions</h6>' /**/
+'<h3>ENTROPY</h3><p>Introduce corruption to Iteration</p>',
+'<h3>CHORUS</h3><p>Repeat motifs across components</p>',
+'<h3>ECHO</h3><p>Repeat, but less</p>',
+'<h3>ENHANCE</h3><p>Furnish with elements of beauty</p>',
+'<h3>POSSESS</h3><p>Imbibe iteration with the spirit of a personal hero</p>',
+'<h3>EXPLODE</h3><p>Fragment Iteration into disorganised components</p>',
+'<h3>REMIX</h3><p>Combine all previous Iterations</p>',
+'<span style="font-size: large;">RESPAWN<strong></h3><p>Re-Iterate all components, motifs and functionality in a new way</p>',
+'<h3>ABORT</h3><p>Prematurely complete process</p>',
+'<h3>DRUG</h3><p>Visualise the effects of legal and non-legal intoxications</p>',
+'<h3>DISTORT</h3><p>Next process only affects one part of Iteration</p>',
+'<h3>COPY</h3><p>Duplicate component or aspect</p>',
+'<h3>PURIFY</h3><p>Remove all unnecessary affectations from Iteration</p>',
+'<h3>SHUFFLE</h3><p>Disorder components</p>',
+'<h3>COMPRESS</h3><p>Remove excessive space</p>',
+'<h3>EQUALISE</h3><p>Assign same value of importance to all components</p>',
+'<h3>PASTLIFE</h3><p>Re-Iterate as an ancestor from a different time period</p>',
+'<h3>LOOP</h3><p>Repeat last Iteration</p>',
+'<h3>SAMPLE</h3><p>Add new functionality</p>',
+'<h3>PURGE</h3><p>Remove all functionality</p>',
+'<h3>BOUNCE</h3><p>Re-Iterate as the absolute opposite</p>',
+'<h3>CUT</h3><p>Remove component or aspect</p>',
+'<h3>THOMPSON</h3><p>Encourage craziness in Iteration</p>',
+'<h3>DELICATE</h3><p>Like a leaf on the wind</p>',
+'<h3>ORDER</h3><p>Logical, linear, layout</p>',
+'<h3>FORCE</h3><p>Complicate the Iteration to the point of unusability</p>',
+'<h3>GHOST</h3><p>Echo a design classic</p>',
+'<h3>LAX</h3><p>Be lazy about the process</p>',
+'<h3>LIFELINE</h3><p>Get a colleague to Iterate</p>',
+'<h3>DISGUISE</h3><p>Make Iteration look like something else</p>',
+'<h3>LOBOTOMISE</h3><p>Remove all complications from Iteration</p>',
+'<h3>SPLIT SIGNAL</h3><p>Create two Iterations each containing half the components</p>',
+'<h3>CLEAN</h3><p>Lighten colours, soften textures, smooth components</p>',
+'<h3>DIRT</h3><p>Darken colours, harden textures, roughen components</p>',
+'<h3>LYNCH</h3><p>Encourage surrealism in Iteration</p>',
+'<h3>FUZZ</h3><p>Soften sharpness. Smooth edges</p>',
+'<h3>VIRUS</h3><p>Grow new iteration from each component, function, affectation</p>',
+'<h3>REPLACE</h3><p>Replace component with another</p>',
+'<h3>OVERDRIVE</h3><p>Create ten Iterations in twenty minutes</p>',
+'<h3>REVERB</h3><p>Remove main component leaving associated affectations</p>',
+'<h3>SATURATE</h3><p>Re-iterate using five more cards</p>',
+'<h3>BLUR</h3><p>Blend component processes and affectations together</p>',
+'<h3>DODGE</h3><p>Remove extra detail from affectations or functions</p>',
+'<h3>BURN</h3><p>Apply extra detail to affectations or functions</p>' /**/
 ];
             
-    $('#text-box').randomText( textArray, 1000000, "Next Quote" ); // ( array, interval, ["reload text or html"] )
+    $('#cards').randomText( textArray, 1000000, '<span class="refresh"><i class="fa fa-refresh fa-2x"></i></span>' ); // ( array, interval, ["reload text or html"] )
 });
 // custom jquery plugin loadText()
 $.fn.randomText = function( textArray, interval, randomEle, prevText ) {
@@ -108,14 +123,28 @@ function random_array( aArray ) {
 </script>
 </head>
 <body>
+    
+<div class="container">
+    
+    <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+        
+     <h2 style="text-align: center;">Iterations Creativity Cards</h2>   
+     <div id="cards"></div>
 
-
-    <div id="text-box"></div>
-<h2>Iterations Creativity Cards</h2>
+      <p style="text-align: center; padding-top: 10px;"><small><a title="CC BY-NC-SA 3.0" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Licence</a> | <a title="Send Feedback" href="mailto:info@sparkwoodand21.com?subject=IterationsFeedback">Send Feedback</a> | <a title="Suggest A Card" href="mailto:info@sparkwoodand21.com?subject=SuggestACard">Suggest a Card</a> | <a href="http://shop.sparkwoodand21.com/product/creativity-cards/">Buy physical deck</a></small></p> 
+        </div>
+  <div class="col-md-3"></div>
+</div>
     <p>Iterations Creativity Cards are a new way to help you with your creativity. Sketch out an idea, draw a card, refine that idea based on the card’s instructions. Repeat.</p>
     <p>Creative methodologies usually combine divergent thinking (applying a stimulus to generate potential outcomes) and convergent thinking (bringing facts and data together and applying logic).</p>
     <p>The Iterations cards help divergent thinking by giving suggestions on how to process the output. They work as a set of guitar effect pedals to your process. There is an input, a set of ambiguous instructions that can be applied to this input, and an undetermined output created by these effects.</p>
-    <p style="text-align: center;"><a title="CC BY-NC-SA 3.0" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Licence</a> | <a title="Send Feedback" href="mailto:info@sparkwoodand21.com?subject=IterationsFeedback">Send Feedback</a> | <a title="Suggest A Card" href="mailto:info@sparkwoodand21.com?subject=SuggestACard">Suggest a Card</a> | <a href="http://sparkwoodand21.com/merch/sw21-003-creative-cards-for-product-designers/">Buy physical deck</a></p>
-
+</div> <!-- CONTAINER -->
+ 
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="dist/js/bootstrap.min.js"></script>
 </body>
 </html>
