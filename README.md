@@ -1,4 +1,4 @@
-iterations
+Iterations
 ==========
 
-Creativity cards that help with the iterative design process
+Creativity cards that help with the iterative design process.
