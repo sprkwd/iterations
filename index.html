@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style type="text/css">
+#text-box {    
+        border-radius: 15px;    
+        -moz-border-radius: 15px;    
+        background: #efefef;    
+        border: 1px solid #ccc;    
+        padding: 75px 20px 0 20px;    
+        height: 175px;    
+        width: 400px;
+    }
+
+#text-content {	
+        color: #333;	
+        text-shadow: 0 1px 0 #fff;
+        text-align:center;
+    }
+    
+#randomizer {	
+        border-top: 0px solid #999;	
+        display: block;	
+        margin-top: 10px;	
+        text-align: right;	
+        padding-top: 10px;	
+        outline: none;
+    }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript">	
+$(document).ready( function() {
+    var textArray = [
+'<span style="font-size: large;"><strong>ENTROPY</strong></span><br /><br /><h6>Introduce corruption to Iteration</h6>',
+'<span style="font-size: large;"><strong>CHORUS</strong></span><br /><br /><h6>Repeat motifs across components</h6>',
+'<span style="font-size: large;"><strong>ECHO</strong></span><br /><br /><h6>Repeat, but less</h6>',
+'<span style="font-size: large;"><strong>ENHANCE</strong></span><br /><br /><h6>Furnish with elements of beauty</h6>',
+'<span style="font-size: large;"><strong>POSSESS</strong></span><br /><br /><h6>Imbibe iteration with the spirit of a personal hero</h6>',
+'<span style="font-size: large;"><strong>EXPLODE</strong></span><br /><br /><h6>Fragment Iteration into disorganised components</h6>',
+'<span style="font-size: large;"><strong>REMIX</strong></span><br /><br /><h6>Combine all previous Iterations</h6>',
+            '<span style="font-size: large;">RESPAWN<strong></strong></span><br /><br /><h6>Re-Iterate all components, motifs and functionality in a new way</h6>',
+            '<span style="font-size: large;"><strong>ABORT</strong></span><br /><br /><h6>Prematurely complete process</h6>',
+            '<span style="font-size: large;"><strong>DRUG</strong></span><br /><br /><h6>Visualise the effects of legal and non-legal intoxications</h6>',
+            '<span style="font-size: large;"><strong>DISTORT</strong></span><br /><br /><h6>Next process only affects one part of Iteration</h6>',
+            '<span style="font-size: large;"><strong>COPY</strong></span><br /><br /><h6>Duplicate component or aspect</h6>',
+            '<span style="font-size: large;"><strong>PURIFY</strong></span><br /><br /><h6>Remove all unnecessary affectations from Iteration</h6>',
+            '<span style="font-size: large;"><strong>SHUFFLE</strong></span><br /><br /><h6>Disorder components</h6>',
+            '<span style="font-size: large;"><strong>COMPRESS</strong></span><br /><br /><h6>Remove excessive space</h6>',
+            '<span style="font-size: large;"><strong>EQUALISE</strong></span><br /><br /><h6>Assign same value of importance to all components</h6>',
+            '<span style="font-size: large;"><strong>PASTLIFE</strong></span><br /><br /><h6>Re-Iterate as an ancestor from a different time period</h6>',
+            '<span style="font-size: large;"><strong>LOOP</strong></span><br /><br /><h6>Repeat last Iteration</h6>',
+            '<span style="font-size: large;"><strong>SAMPLE</strong></span><br /><br /><h6>Add new functionality</h6>',
+            '<span style="font-size: large;"><strong>PURGE</strong></span><br /><br /><h6>Remove all functionality</h6>',
+            '<span style="font-size: large;"><strong>BOUNCE</strong></span><br /><br /><h6>Re-Iterate as the absolute opposite</h6>',
+            '<span style="font-size: large;"><strong>CUT</strong></span><br /><br /><h6>Remove component or aspect</h6>',
+            '<span style="font-size: large;"><strong>THOMPSON</strong></span><br /><br /><h6>Encourage craziness in Iteration</h6>',
+            '<span style="font-size: large;"><strong>DELICATE</strong></span><br /><br /><h6>Like a leaf on the wind</h6>',
+            '<span style="font-size: large;"><strong>ORDER</strong></span><br /><br /><h6>Logical, linear, layout</h6>',
+            '<span style="font-size: large;"><strong>FORCE</strong></span><br /><br /><h6>Complicate the Iteration to the point of unusability</h6>',
+            '<span style="font-size: large;"><strong>GHOST</strong></span><br /><br /><h6>Echo a design classic</h6>',
+            '<span style="font-size: large;"><strong>LAX</strong></span><br /><br /><h6>Be lazy about the process</h6>',
+            '<span style="font-size: large;"><strong>LIFELINE</strong></span><br /><br /><h6>Get a colleague to Iterate</h6>',
+            '<span style="font-size: large;"><strong>DISGUISE</strong></span><br /><br /><h6>Make Iteration look like something else</h6>',
+            '<span style="font-size: large;"><strong>LOBOTOMISE</strong></span><br /><br /><h6>Remove all complications from Iteration</h6>',
+            '<span style="font-size: large;"><strong>SPLIT SIGNAL</strong></span><br /><br /><h6>Create two Iterations each containing half the components</h6>',
+            '<span style="font-size: large;"><strong>CLEAN</strong></span><br /><br /><h6>Lighten colours, soften textures, smooth components</h6>',
+            '<span style="font-size: large;"><strong>DIRT</strong></span><br /><br /><h6>Darken colours, harden textures, roughen components</h6>',
+            '<span style="font-size: large;"><strong>LYNCH</strong></span><br /><br /><h6>Encourage surrealism in Iteration</h6>',
+            '<span style="font-size: large;"><strong>FUZZ</strong></span><br /><br /><h6>Soften sharpness. Smooth edges</h6>',
+            '<span style="font-size: large;"><strong>VIRUS</strong></span><br /><br /><h6>Grow new iteration from each component, function, affectation</h6>',
+            '<span style="font-size: large;"><strong>REPLACE</strong></span><br /><br /><h6>Replace component with another</h6>',
+            '<span style="font-size: large;"><strong>OVERDRIVE</strong></span><br /><br /><h6>Create ten Iterations in twenty minutes</h6>',
+            '<span style="font-size: large;"><strong>REVERB</strong></span><br /><br /><h6>Remove main component leaving associated affectations</h6>',
+            '<span style="font-size: large;"><strong>SATURATE</strong></span><br /><br /><h6>Re-iterate using five more cards</h6>',
+            '<span style="font-size: large;"><strong>BLUR</strong></span><br /><br /><h6>Blend component processes and affectations together</h6>',
+            '<span style="font-size: large;"><strong>DODGE</strong></span><br /><br /><h6>Remove extra detail from affectations or functions</h6>',
+            '<span style="font-size: large;"><strong>BURN</strong></span><br /><br /><h6>Apply extra detail to affectations or functions</h6>' /**/
+];
+            
+    $('#text-box').randomText( textArray, 1000000, "Next Quote" ); // ( array, interval, ["reload text or html"] )
+});
+// custom jquery plugin loadText()
+$.fn.randomText = function( textArray, interval, randomEle, prevText ) {
+    var obj = $(this);
+    if( $('#text-content').length == 0 ){ obj.append('<div id="text-content">'); }
+    var textCont = $('#text-content');
+    if( typeof randomEle != 'undefined' ){ if( $('#randomizer').length == 0 ){ obj.append('<a href="javascript:;" id="randomizer"><em>' + randomEle ); } }
+    textCont.fadeOut( 'slow', function() {
+        var chosenText = random_array( textArray );
+        while( chosenText == prevText ) { chosenText = random_array( textArray ); }
+        textCont.empty().html( chosenText );
+        textCont.fadeIn( 'slow' );
+        sendText = chosenText;
+    });
+    timeOut = setTimeout( function(){ obj.randomText( textArray, interval, randomEle, sendText ); }, interval );
+    $("#randomizer").click( function(){
+        if( !textCont.is(':animated') ) { clearTimeout( timeOut ); obj.randomText( textArray, interval, randomEle, sendText );} // animation check prevents "too much recursion" error in jQuery 
+    });
+}
+//public function
+function random_array( aArray ) {
+    var rand = Math.floor( Math.random() * aArray.length + aArray.length );
+    var randArray = aArray[ rand - aArray.length ];
+    return randArray;
+}
+</script>
+</head>
+<body>
+
+
+    <div id="text-box"></div>
+<h2>Iterations Creativity Cards</h2>
+    <p>Iterations Creativity Cards are a new way to help you with your creativity. Sketch out an idea, draw a card, refine that idea based on the card’s instructions. Repeat.</p>
+    <p>Creative methodologies usually combine divergent thinking (applying a stimulus to generate potential outcomes) and convergent thinking (bringing facts and data together and applying logic).</p>
+    <p>The Iterations cards help divergent thinking by giving suggestions on how to process the output. They work as a set of guitar effect pedals to your process. There is an input, a set of ambiguous instructions that can be applied to this input, and an undetermined output created by these effects.</p>
+    <p style="text-align: center;"><a title="CC BY-NC-SA 3.0" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Licence</a> | <a title="Send Feedback" href="mailto:info@sparkwoodand21.com?subject=IterationsFeedback">Send Feedback</a> | <a title="Suggest A Card" href="mailto:info@sparkwoodand21.com?subject=SuggestACard">Suggest a Card</a> | <a href="http://sparkwoodand21.com/merch/sw21-003-creative-cards-for-product-designers/">Buy physical deck</a></p>
+
+</body>
+</html>
