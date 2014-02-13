@@ -1,13 +1,15 @@
-body {
-    background: #f9f9f9;    
-}
+body {background: #f9f9f9;}
+h3 {font-family: 'Vollkorn', serif; padding-bottom: 10px;}
+a {color: #693;}
+a:hover, p {color: #777;}
+
 
 #cards {    
         border-radius: 15px;    
         -moz-border-radius: 15px;    
         background: #ffffff;    
         border: 1px solid #ccc;    
-        padding: 75px 20px 0 20px;    
+        padding: 65px 25px 0 25px;    
         height: 250px;    
         width: 400px;
       margin-left: auto;
@@ -29,24 +31,7 @@ body {
         padding-top: 10px;	
         outline: none;
     }
-a {
-    color: #693;
-}
 
-.refresh {
-position:absolute; bottom:20px; right:20px;
-}
-
-.container {
-    padding-top: 10%;
-}
-
-.sharing {
-    text-align: center;
-    padding-top: 10px;
-}
-
-h3 {
-    font-family: 'Vollkorn', serif;
-    padding-bottom: 10px;
-}
+.sharing {text-align: center; padding-top: 10px;}
+.refresh { position:absolute; bottom:20px; right:20px;}
+.container {padding-top: 10%;}
