@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
       
 <!-- Page SEO ================================================== -->
 <meta name="robots" content="index,follow" />
@@ -34,55 +35,28 @@
 <meta name="twitter:domain" content="http://dncnmckn.github.io/iterations">
 <!-- /Page SEO ================================================== -->
     
-    <title>Iterations: idea generation app for designers</title>
+<title>Iterations: idea generation app for designers</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font-awesome 4.0.3 CSS -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!-- Font-awesome 4.0.3 CSS -->
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+<!-- Custom styles for this template CSS -->
+<link href="style.css" rel="stylesheet">
     
-    <!-- Adding Vollkorn Google font -->
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:700' rel='stylesheet' type='text/css'>
+<!-- Adding Vollkorn Google font CSS -->
+<link href='http://fonts.googleapis.com/css?family=Vollkorn:700' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 </head>
 <body>
-
-<div class="container">
-    
-<div class="row">
-<div class="col-md-3"></div>
-        
-<div class="col-md-6">
-<h2 style="text-align: center;">Iterations Creativity Cards <small><a href="#" type="button" data-toggle="modal" data-target="#details"><i class="fa fa-question-circle"></i></a></small></h2>   
-<div id="cards"></div>
-    
-<div class="sharing">    
-<a href="https://www.facebook.com/sharer/sharer.php?u=http://dncnmckn.github.io/iterations" role="button" class="btn btn-primary btn-xs" ><i class="fa fa-facebook"></i> Share</a>
-<a href="http://twitter.com/share?text=Iterations: idea generation app for designers (via @dncnmckn)&url=http://dncnmckn.github.io/iterations&hashtags=designprocess
-" role="button" class="btn btn-info btn-xs" ><i class="fa fa-twitter"></i> Share</a>
-<a href="https://plus.google.com/share?url=http://dncnmckn.github.io/iterations" role="button" class="btn btn-danger btn-xs" ><i class="fa fa-google-plus"></i> Share</a>
-
-</div>
-    
-</div>
-
-<div class="col-md-3"></div>
-</div>
-
-</div> <!-- CONTAINER -->
-    
-
  <!-- infoPopup Modal HAS TO BE A CHILD OF <BODY> TO SHOW CORRECTLY-->
 <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="details" aria-hidden="true">
   <div class="modal-dialog">
@@ -105,9 +79,37 @@
     </div>
   </div>
 </div> <!-- / Modal -->
- 
+    
+<div class="container">
+    
+<i class="fa fa-refresh fa-5x"></i>
+    
+<div class="row">
+<div class="col-md-3"></div>
+        
+<div class="col-md-6">
+<h2 style="text-align: center;">Iterations Creativity Cards <small><a href="#" data-toggle="modal" data-target="#details"><i class="fa fa-question-circle"></i></a></small></h2>   
+<div id="cards"></div>
+    
+<div class="sharing">    
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://dncnmckn.github.io/iterations" role="button" class="btn btn-primary btn-xs" ><i class="fa fa-facebook"></i> Share</a>
+<a href="http://twitter.com/share?text=Iterations: idea generation app for designers (via @dncnmckn)&url=http://dncnmckn.github.io/iterations&hashtags=designprocess
+" role="button" class="btn btn-info btn-xs" ><i class="fa fa-twitter"></i> Share</a>
+<a href="https://plus.google.com/share?url=http://dncnmckn.github.io/iterations" role="button" class="btn btn-danger btn-xs" ><i class="fa fa-google-plus"></i> Share</a>
+
+</div>
+    
+</div>
+
+<div class="col-md-3"></div>
+</div>
+
+</div> <!-- CONTAINER -->
+    
 <!-- Bootstrap core JavaScript ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<!-- Latest JQuery link alwaysbefore Bootstrap to get modal to work -->   
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
     
 <!-- Iterations JavaScript ================================================== -->
@@ -188,6 +190,27 @@ function random_array( aArray ) {
     return randArray;
 }
 </script>
+
+<!-- PiWik JavaScript ================================================== -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.sparkwoodand21.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "8"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
     
 </body>
 </html>
+
+<!--
+Creative People
+Use their tools in unique ways
+Hail innovation!
+-->
