@@ -45,3 +45,8 @@ position:absolute; bottom:20px; right:20px;
     text-align: center;
     padding-top: 10px;
 }
+
+h3 {
+    font-family: 'Vollkorn', serif;
+    padding-bottom: 10px;
+}
