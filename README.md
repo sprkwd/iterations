@@ -14,4 +14,3 @@ Iterations help divergent thinking by giving suggestions on how to process the o
 
 In layman’s terms: you sketch an idea, then draw a card. Then draw a new sketch based around your interpretation of what the card says. Then draw another card. Sketch another new sketch based on what the card says. And repeat. The results can lead iterative sketching down new and innovative paths not normally reached through standard idea generation.
 
-For more info, visit: http://sparkwoodand21.com/portfolio/creativity-cards/
