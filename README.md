@@ -1,7 +1,7 @@
 Iterations
 ==========
 
-Creativity cards that help with the iterative design process.
+A creativity app that can help people with their iterative creative process.
 
 About
 =====
