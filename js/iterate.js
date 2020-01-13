@@ -3,7 +3,7 @@ Iterations 2.0 js file
 author: Duncan McKean (I can't remember where it originally came from, but I tweaked it.)
 website: https://duncanmckean.com
 */
-
+var $ = jQuery;
 $(document).ready(function() {
     var textArray = [
             '<h3>Entropy</h3><p>Introduce corruption to concept.</p>',
