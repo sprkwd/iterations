@@ -1,0 +1,54 @@
+/*
+
+Iterations 2.0 CSS file
+author: Duncan McKean
+website: https://duncanmckean.com
+
+*/
+
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('../fonts/oswald-bold-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'estebanregular';
+    src: url('../fonts/esteban-regular-webfont.woff2') format('woff2'),
+         url('../fonts/esteban-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {background: #232323;}
+
+h3 {
+    color: #ffffff;
+    font-family: 'oswaldbold', serif; 
+    font-size: 3em;
+}
+
+p {
+    color: #fafafa;
+    font-family: 'estebanregular', serif;
+    font-size: 2em;
+}
+
+#text-content {	
+    color: #ffffff;	
+    text-align:center;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+#randomizer {
+    cursor: pointer;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
